@@ -154,5 +154,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
+# Realtime Charging Info
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Inherit from the proprietary version
 -include vendor/samsung/sdm845-common/BoardConfigVendor.mk
