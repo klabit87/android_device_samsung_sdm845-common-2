@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.9810
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
