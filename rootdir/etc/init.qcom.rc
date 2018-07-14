@@ -34,6 +34,10 @@ on early-init
 
 on init
 
+    # Power
+    mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
+    mount none /system/lib/hw/power.qcom.so /vendor/lib/hw/power.qcom.so bind
+
     # Override vendor audio_policy_configurations
     mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind

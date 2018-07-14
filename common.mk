@@ -99,6 +99,10 @@ PRODUCT_PACKAGES += \
     libnfc-nci \
     libnfc_nci_jni
 
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
 
