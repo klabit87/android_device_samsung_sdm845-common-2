@@ -51,6 +51,9 @@ TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
 # Init
+
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.rilchip.rc \
