@@ -141,8 +141,13 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     /mnt/vendor/efs:/efs
 
 # Telephony
+<<<<<<< HEAD
 # TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
     
+=======
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
+>>>>>>> 60d417a5... sdm845-common: Start using vendor_overlay
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
