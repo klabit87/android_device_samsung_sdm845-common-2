@@ -48,6 +48,8 @@ static inline const char* BtmGetDefaultName()
 
 #define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
 
+#define AVDT_NUM_SEPS 12
+
 #pragma pop_macro("PROPERTY_VALUE_MAX")
 
 #endif
