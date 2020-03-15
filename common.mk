@@ -115,6 +115,9 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml
 
+# S-Pen
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/samsung-sec_e-pen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_e-pen.idc
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
