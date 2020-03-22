@@ -67,6 +67,7 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # Treble
 BOARD_VNDK_VERSION := current
+PRODUCT_TARGET_VNDK_VERSION := 29
 
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
@@ -81,6 +82,7 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Display
 TARGET_USES_HWC2 := true
+BACKLIGHT_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -133,9 +135,9 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
     
 # Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
