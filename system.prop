@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 # Disable ConsumerIR
 config.disable_consumerir=true
 
 # SF
 debug.sf.latch_unsignaled=1
-=======
+
 # read DS/SS property
 import /efs/factory.prop
->>>>>>> b3485a8... universal9810: Add bluetooth config

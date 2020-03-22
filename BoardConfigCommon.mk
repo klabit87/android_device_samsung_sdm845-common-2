@@ -87,11 +87,6 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 TARGET_USES_HWC2 := true
 BACKLIGHT_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 
-# Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/universal9810
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
@@ -140,7 +135,7 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     /vendor/firmware_mnt:/firmware
 
 # Telephony
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+# TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
     
 # Sepolicy
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
