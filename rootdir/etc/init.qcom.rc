@@ -40,6 +40,12 @@ on init
 
     mount none /vendor/lost+found /vendor/bin/hw/android.hardware.power@1.0-service bind
 
+    # Brightness Permission
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
+    chmod 0660 /sys/class/backlight/panel0-backlight/brightness
+    chmod 0660 /sys/class/backlight/panel0-backlight/max_brightness
+
 on fs 
 
 # Loggy
@@ -48,6 +54,3 @@ service loggy /system/bin/sh /loggy.sh
     user root
     oneshot
 
-on boot
-service sec-light-hal-2-0 /system/bin/true
-    disabled
