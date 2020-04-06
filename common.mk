@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/sdm845-common/sdm845-common-vendor.mk)
+$(call inherit-product, vendor/samsung/sdm845-common/sdm845-common-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2960
@@ -35,16 +35,17 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
-    frameworks/native/data/etc/android.hardware.sensor.heartrate.xml:system/etc/permissions/android.hardware.sensor.heartrate.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml \
-    frameworks/native/data/etc/android.software.freeform_window_management.xml:system/etc/permissions/android.software.freeform_window_management.xml \
-    $(LOCAL_PATH)/permissions/imsmanager_library.xml:system/etc/permissions/imsmanager_library.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.ethernet.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
+    frameworks/native/data/etc/android.hardware.sensor.heartrate.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.sensor.heartrate.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vr.high_performance.xml \
+    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.freeform_window_management.xml \
+    $(LOCAL_PATH)/permissions/imsmanager_library.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/imsmanager_library.xml \
+    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2960
@@ -55,20 +56,18 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
-    init.qcom.rc \
-    init.rilchip.rc \
-    init.rilcommon.rc \
-    init.rilepdg.rc
+    init.qcom.rc
+#    init.rilchip.rc \
+#    init.rilcommon.rc \
+#    init.rilepdg.rc
 
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
-PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -105,17 +104,23 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 # qti interfaces
-PRODUCT_PACKAGES += \
-    QtiAudio \
-    vendor.qti.hardware.radio.am-V1.0-java \
-	vendor.qti.qcril.am-V1.0-java
+#PRODUCT_PACKAGES += \
+#    QtiAudio \
+#    vendor.qti.hardware.radio.am-V1.0-java \
+#	vendor.qti.qcril.am-V1.0-java
 
 # Telephony
 PRODUCT_PACKAGES += \
+#    ims-ext-common \
+#    ims_ext_common.xml \
+#    qti-telephony-hidl-wrapper \
+#    qti_telephony_hidl_wrapper.xml \
+#    qti-telephony-utils \
+#    qti_telephony_utils.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
-	device/samsung/sdm845-common/interfaces.xml:system/etc/permissions/interfaces.xml
+	device/samsung/sdm845-common/interfaces.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/interfaces.xml
