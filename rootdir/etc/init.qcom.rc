@@ -78,4 +78,15 @@ on post-fs-data
     chown system system /sys/class/sec/led/led_blink
     chown system system /sys/class/sec/led/led_br_lev
 
+service proca /system/bin/true
+    disabled
+
+service secure_storage /system/bin/true
+    disabled
+
+service vaultkeeper /system/bin/true
+    disabled
+
+service sec_wsm_service /system/bin/true
+    disabled
 
