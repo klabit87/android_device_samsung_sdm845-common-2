@@ -140,8 +140,8 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 # TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
     
 # Sepolicy
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
-#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 # Releasetools
