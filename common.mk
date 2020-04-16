@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# SamsungDoze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # qti interfaces
 #PRODUCT_PACKAGES += \
 #    QtiAudio \
