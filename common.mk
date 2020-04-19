@@ -130,5 +130,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
 	device/samsung/sdm845-common/interfaces.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/interfaces.xml
         
+# Trust HAL
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
+    
 # Property overrides
 -include $(LOCAL_PATH)/product_prop.mk
