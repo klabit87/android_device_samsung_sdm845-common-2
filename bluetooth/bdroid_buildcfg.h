@@ -40,13 +40,12 @@ static inline const char* BtmGetDefaultName()
 }
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-
 #define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
 #define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
-
 #define BLE_VND_INCLUDED TRUE
-
 #define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
+#define MAX_ACL_CONNECTIONS   16
+#define MAX_L2CAP_CHANNELS    16
 
 #pragma pop_macro("PROPERTY_VALUE_MAX")
 
