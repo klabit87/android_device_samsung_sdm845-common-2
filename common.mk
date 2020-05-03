@@ -57,9 +57,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
     init.qcom.rc
-#    init.rilchip.rc \
-#    init.rilcommon.rc \
-#    init.rilepdg.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -100,10 +97,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
 
-# Power
-PRODUCT_PACKAGES += \
-    power.qcom:64
-
 # Remove AudioFX
 PRODUCT_PACKAGES += \
     RemovePackages
@@ -111,12 +104,6 @@ PRODUCT_PACKAGES += \
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze
-
-# qti interfaces
-#PRODUCT_PACKAGES += \
-#    QtiAudio \
-#    vendor.qti.hardware.radio.am-V1.0-java \
-#	vendor.qti.qcril.am-V1.0-java
 
 # Telephony
 PRODUCT_PACKAGES += \

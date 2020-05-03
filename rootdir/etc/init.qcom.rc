@@ -32,13 +32,10 @@ on early-init
 
 
 on init
-    mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
-    mount none /system/lib/hw/power.qcom.so /vendor/lib/hw/power.qcom.so bind
 
     # Override vendor audio_policy_configurations
     mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
-    mount none /vendor/lost+found /vendor/bin/hw/android.hardware.power@1.0-service bind
 
     # Brightness Permission
     chown system system /sys/class/backlight/panel0-backlight/brightness
@@ -47,15 +44,7 @@ on init
     chmod 0660 /sys/class/backlight/panel0-backlight/max_brightness
 
     # Flashlight
-    chown system system /sys/class/camera/flash/rear_flash 
-
-on fs 
-
-# Loggy
-service loggy /system/bin/sh /loggy.sh
-    class main
-    user root
-    oneshot
+    chown system system /sys/class/camera/flash/rear_flash
 
 on post-fs-data
 
@@ -92,4 +81,3 @@ service vaultkeeper /system/bin/true
 
 service sec_wsm_service /system/bin/true
     disabled
-
