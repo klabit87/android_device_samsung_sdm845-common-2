@@ -132,6 +132,8 @@
         <item>"7,1"</item>
     </string-array>
 
+    <string name="config_radio_access_family">GSM|WCDMA|LTE</string>
+
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
