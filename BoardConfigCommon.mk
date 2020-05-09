@@ -129,7 +129,7 @@ TW_INCLUDE_FBE := true
 endif
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := bt_firmware firmware odm persist
+BOARD_ROOT_EXTRA_FOLDERS := bt_firmware firmware persist
 BOARD_ROOT_EXTRA_FOLDERS := \
     /mnt/vendor/persist:/persist \
     /vendor/bt_firmware:/bt_firmware \
