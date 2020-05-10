@@ -27,8 +27,9 @@
 on early-init
     # create symlink for vendor mount points
     symlink /vendor/firmware_mnt /firmware
-    symlink /vnedor/bt_firmware /bt_firmware
+    symlink /vendor/bt_firmware /bt_firmware
     symlink /vendor/dsp /dsp
+    symlink /mnt/vendor/efs /efs
 
 
 on init
@@ -81,3 +82,7 @@ service vaultkeeper /system/bin/true
 
 service sec_wsm_service /system/bin/true
     disabled
+
+on property:sys.boot_completed=1
+    # Offload bluetooth a2dp like stock
+    setprop persist.bluetooth.a2dp_offload.disabled true
