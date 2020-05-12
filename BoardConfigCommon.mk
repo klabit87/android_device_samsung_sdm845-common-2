@@ -88,6 +88,8 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Display
 TARGET_USES_HWC2 := true
 BACKLIGHT_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -129,12 +131,13 @@ TW_INCLUDE_FBE := true
 endif
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := bt_firmware firmware persist
+BOARD_ROOT_EXTRA_FOLDERS := bt_firmware firmware persist efs
 BOARD_ROOT_EXTRA_FOLDERS := \
     /mnt/vendor/persist:/persist \
     /vendor/bt_firmware:/bt_firmware \
     /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware
+    /vendor/firmware_mnt:/firmware \
+    /mnt/vendor/efs:/efs
 
 # Telephony
 # TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
