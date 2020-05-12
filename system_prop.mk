@@ -64,3 +64,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Tones
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Orion.ogg \
+    ro.config.notification_sound=Argon.ogg \
+    ro.config.alarm_alert=Hassium.ogg \
+    ro.config.vc_call_vol_steps=7
+
