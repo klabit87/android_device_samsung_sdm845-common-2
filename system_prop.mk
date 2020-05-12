@@ -35,6 +35,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1  \
     persist.dbg.wfc_avail_ovr=1
 
+# Netflix custom property
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q845-05000-1
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.bar_fake_gcell=1 \
