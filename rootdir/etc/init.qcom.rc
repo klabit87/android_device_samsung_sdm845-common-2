@@ -72,15 +72,19 @@ on post-fs-data
     chown system system /sys/class/sec/led/led_br_lev
 
 service proca /system/bin/true
+    oneshot
     disabled
 
 service secure_storage /system/bin/true
+    oneshot
     disabled
 
 service vaultkeeper /system/bin/true
+    oneshot
     disabled
 
 service sec_wsm_service /system/bin/true
+    oneshot
     disabled
 
 on property:sys.boot_completed=1
