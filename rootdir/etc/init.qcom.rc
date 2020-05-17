@@ -47,6 +47,12 @@ on init
     # Flashlight
     chown system system /sys/class/camera/flash/rear_flash
 
+on boot
+
+    # Vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/timed_output/vibrator/intensity
+
 on post-fs-data
 
 # SVC LED
