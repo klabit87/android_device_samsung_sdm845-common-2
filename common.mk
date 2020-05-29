@@ -67,10 +67,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     init.qcom.rc
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -149,6 +145,9 @@ PRODUCT_COPY_FILES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
+
+# vendor_overlay
+-include $(LOCAL_PATH)/vendor_overlay.mk
     
 # Property overrides
 -include $(LOCAL_PATH)/product_prop.mk
