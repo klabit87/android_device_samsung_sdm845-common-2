@@ -103,6 +103,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat

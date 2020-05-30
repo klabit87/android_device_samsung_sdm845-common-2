@@ -18,18 +18,27 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_MODULE := android.hardware.light@2.0-service.sdm845
+LOCAL_MODULE_TAGS  := optional
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MODULE_STEM := vendor.samsung.hardware.light@3.0-service
+
 LOCAL_SRC_FILES := \
     Light.cpp \
     service.cpp
 
+LOCAL_REQUIRED_MODULES := \
+    android.hardware.light@2.0-service.sdm845.rc
+
 LOCAL_SHARED_LIBRARIES := \
     libbase \
-    liblog \
-    libdl \
-    libbinder \
+    libhardware \
     libhidlbase \
     libhidltransport \
-    libhardware \
+    liblog \
+    libhwbinder \
     libutils \
     android.hardware.light@2.0
 
@@ -37,5 +46,19 @@ LOCAL_MODULE := android.hardware.light@2.0-service.sdm845
 LOCAL_INIT_RC := android.hardware.light@2.0-service.sdm845.rc
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := samsung
 
 include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := android.hardware.light@2.0-service.sdm845.rc
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init
+LOCAL_MODULE_STEM := vendor.samsung.hardware.light@3.0-service.rc
+
+LOCAL_SRC_FILES := android.hardware.light@2.0-service.sdm845.rc
+
+include $(BUILD_PREBUILT)
