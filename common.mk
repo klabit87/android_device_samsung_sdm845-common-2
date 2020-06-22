@@ -21,10 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sdm845-common/sdm845-common-vendor.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2960
-TARGET_SCREEN_WIDTH := 1440
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -49,8 +45,8 @@ PRODUCT_COPY_FILES += \
 
 # Screen density
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := xlarge
-PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := 560dpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
@@ -83,7 +79,7 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
-
+    
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.sdm845
@@ -105,6 +101,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc \
+    fastbootd
 
 # Remove AudioFX
 PRODUCT_PACKAGES += \
@@ -147,3 +148,4 @@ PRODUCT_PACKAGES += \
     
 # Property overrides
 -include $(LOCAL_PATH)/product_prop.mk
+-include $(LOCAL_PATH)/vendor_prop.mk
