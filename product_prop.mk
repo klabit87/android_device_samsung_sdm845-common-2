@@ -15,7 +15,10 @@
 #
 
 # Device specific property overrides
-
+# fastbootd
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.fastbootd.available=true
+    
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Orion.ogg \
     ro.config.notification_sound=Argon.ogg \
