@@ -1,1 +1,18 @@
-placebo
+# Audio
+lib/hw/audio.playback_record.default.so
+lib/hw/audio.tms.default.so
+lib/libsecaudiocoreutils.so
+
+# Bluetooth - APT-X
+lib64/libaptX_encoder.so
+
+# Hotword Enrollment
+-priv-app/HotwordEnrollmentOKGoogleExWCD9340/HotwordEnrollmentOKGoogleExWCD9340.apk
+-priv-app/HotwordEnrollmentXGoogleExWCD9340/HotwordEnrollmentXGoogleExWCD9340.apk
+
+# Misc
+lib64/libmaet.so
+lib64/libsxqk_skia.so
+
+# Zswap
+-sbin/sswap;rootfs
