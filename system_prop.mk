@@ -72,3 +72,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.alarm_alert=Hassium.ogg \
     ro.config.vc_call_vol_steps=7
 
+# FRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/platform/soc/1d84000.ufshc/by-name/persistent
