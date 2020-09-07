@@ -45,6 +45,10 @@ on init
 
     # Google FRP
     symlink /dev/block/platform/soc/1d84000.ufshc/by-name/persistent /dev/block/persistent
+    chown system system /dev/block/platform/soc/1d84000.ufshc/by-name/persistent
+    chmod 0600 /dev/block/platform/soc/1d84000.ufshc/by-name/persistent
+    chown system system /dev/block/persistent
+    chmod 0600 /dev/block/persistent
 
 on boot
 
