@@ -1,3 +1,7 @@
+# Ant
+product/lib64/com.qualcomm.qti.ant@1.0.so
+product/lib/com.qualcomm.qti.ant@1.0.so
+
 # Audio
 lib/hw/audio.playback_record.default.so
 lib/hw/audio.tms.default.so
@@ -10,9 +14,37 @@ lib64/libaptX_encoder.so
 -priv-app/HotwordEnrollmentOKGoogleExWCD9340/HotwordEnrollmentOKGoogleExWCD9340.apk
 -priv-app/HotwordEnrollmentXGoogleExWCD9340/HotwordEnrollmentXGoogleExWCD9340.apk
 
-# Misc
+# IMS
+product/lib64/vendor.qti.imsrtpservice@2.0.so
+product/lib64/vendor.qti.imsrtpservice@2.1.so
+product/lib/vendor.qti.imsrtpservice@2.0.so
+product/lib/vendor.qti.imsrtpservice@2.1.so
+-priv-app/ims/ims.apk
+
+# LPM
+bin/lpm
 lib64/libmaet.so
 lib64/libsxqk_skia.so
+media/battery_error.spi
+media/battery_low.spi
+media/battery_temperature_error.spi
+media/battery_temperature_limit.spi
+media/battery_water_usb.spi
+media/charging_New_Fast.spi
+media/charging_New_Normal.spi
+media/dock_error_usb.spi
+media/incomplete_connect.spi
+media/lcd_density.txt
+media/percentage.spi
+media/safety_timer_usb.spi
+media/slow_charging_usb.spi
+media/temperature_limit_usb.spi
+media/water_protection_usb.spi
+
+# Permissions
+etc/permissions/privapp-permissions-qti.xml
+etc/permissions/qti_telephony_hidl_wrapper.xml
+etc/sysconfig/qti_whitelist.xml
 
 # Zswap
 -sbin/sswap;rootfs
