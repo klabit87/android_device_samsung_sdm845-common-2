@@ -4,9 +4,6 @@ config.disable_consumerir=true
 # SF
 debug.sf.latch_unsignaled=1
 
-# read DS/SS property
-import /efs/factory.prop
-
 vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
