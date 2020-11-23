@@ -4,4 +4,4 @@ allow init vendor_overlay_file:file mounton;
 # Allow init to mount vendor configs
 allow init vendor_configs_file:file mounton;
 allow init vendor_configs_file:dir mounton;
-
+allow init runtime_event_log_tags_file:file getattr;
