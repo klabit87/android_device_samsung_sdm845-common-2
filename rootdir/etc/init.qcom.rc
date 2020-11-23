@@ -225,6 +225,13 @@ on init
     chown radio system /sys/devices/virtual/relay_on
     chown radio system /sys/devices/virtual/data_on
 
+# LPM
+service lpm /system/bin/lpm
+    class sec-charger
+    user root
+    group system radio input
+    critical
+
 # DYNAMIC HLPM
     chown system system /sys/class/lcd/panel/dynamic_hlpm
     chmod 0660 /sys/class/lcd/panel/dynamic_hlpm
