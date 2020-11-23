@@ -57,9 +57,7 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Init
-
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
 PRODUCT_PACKAGES += \
     init.qcom.rc
 
@@ -79,7 +77,7 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
-    
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.sdm845
@@ -138,14 +136,14 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
 	device/samsung/sdm845-common/interfaces.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/interfaces.xml
-        
+
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
 # vendor_overlay
 -include $(LOCAL_PATH)/vendor_overlay.mk
-    
+
 # Property overrides
 -include $(LOCAL_PATH)/product_prop.mk
 -include $(LOCAL_PATH)/vendor_prop.mk
