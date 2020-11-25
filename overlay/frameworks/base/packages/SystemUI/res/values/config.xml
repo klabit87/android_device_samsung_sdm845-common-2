@@ -32,6 +32,6 @@
 <resources>
 
    <!-- FPSInfoService Fps file path -->
-    <string name="config_fpsInfoSysNode" translatable="false">/sys/devices/virtual/graphics/fb0/measured_fps</string>
+    <string name="config_fpsInfoSysNode" translatable="false">/sys/kernel/debug/dri/0/crtc119/fps</string>
 
 </resources>
